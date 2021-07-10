@@ -1,0 +1,154 @@
+<div class="hero">
+  <div class="text_banner">
+      <h1><br>RESTU<br>Cevichería</h1>
+      <div>
+        <img class="" src="assets/logos/cevichelogo.png" style="width: 150px; height: 150px;margin-right: 10px; margin-top: 50px">
+      </div>
+      <p style="margin-bottom: 18px;font-weight: 500; font-size: larger;">Cevichería especializada en todo tipo de comida marina<br>Prueba la deliciosa sazón de la variedad que nuestros mares peruanos pueden proveer.</p>
+  </div>
+  <video class="video-bg" autoplay [muted]="'muted'" loop>
+      <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/EPYigw0Ux/videoblocks-the-cook-makes-paella-on-the-open-fire-in-the-big-hot-pan-grill-anf-barbecue-spanish-food-paella-with-seafood-food-cooking-outdoors_bqe_vqlnb__bd4238b8c236251e58d3c72c76b77b41__P360.mp4" type="video/mp4">
+  </video>
+</div>
+<nav class="navbar fixed-top navbar-expand-lg bg-info navbar-text-blue navbar-light scrolling-navbar">
+  <div class="container">
+      <img src="assets/logos/cevichelogobw.png" alt="" style="width: 50px; height:50px;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+          <ul class="navbar-nav mr-auto items" >
+              <li class="nav-item">
+                  <a class="nav-link" href="#carrusel" >Comentarios </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#caracteristicas">Características</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#contact_us">Contáctanos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#funcionalidades">Funcionalidades</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#planes">Planes</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" (click)="login()">Iniciar Sesión</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+<section id="funcionalidades" class="pt-5">
+  <div class="container">
+      <div class="form-row">
+          <div class="col-sm-12">
+              <div class="titulo">
+                  <h1>¿Qué ofrecemos?</h1>
+              </div>
+              <div class="itemsFuncionalides pt-3">
+                  <div class="form-row">
+                      <div class="col-sm-1" style="margin-right: 20px;margin-top: 20px;">
+                          <button mat-fab style="background-color:rgb(255, 208, 0)">
+                              <mat-icon>restaurant</mat-icon>
+                          </button>
+                      </div>
+                      <div class="col-sm-10" style="margin-top: 10px;">
+                          <p style="font-weight: 500;margin-bottom: -4px;">Platos marinos peruanos</p>
+                          <p style="font-weight: lighter;font-size: 16px;">Disponemos de la más amplia variedad de platos peruanos a base de mariscos de nuestros generosos mares.</p>
+                      </div>
+                  </div>
+                  <hr>
+                  <div class="form-row">
+                      <div class="col-sm-1" style="margin-right: 20px;margin-top: 20px;">
+                          <button mat-fab style="background-color: rgb(255, 208, 0)">
+                              <mat-icon>restaurant</mat-icon>
+                          </button>
+                      </div>
+                      <div class="col-sm-10" style="margin-top: 10px;">
+                          <p style="font-weight: 500;margin-bottom: -4px;">Delivery</p>
+                          <p style="font-weight: lighter;font-size: 16px;">¿No puedes venir a nuestro local? No te preocupes, ¡nosotros te llevamos la comida a tu casa!</p>
+                      </div>
+                  </div>
+                  <hr>
+                  <div class="form-row">
+                      <div class="col-sm-1" style="margin-right: 20px;margin-top: 20px;">
+                          <button mat-fab style="background-color: rgb(255, 208, 0)">
+                              <mat-icon>restaurant</mat-icon>
+                          </button>
+                      </div>
+                      <div class="col-sm-10" style="margin-top: 10px;">
+                          <p style="font-weight: 500;margin-bottom: -4px;">Premiados</p>
+                          <p style="font-weight: lighter;font-size: 16px;">Contamos con algunos premios gastronómicos que son muestra clara de nuestra excelente atención y calidad</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--<div>
+  <mat-toolbar class="toolbar2 hidden-xs">
+      <div class="row toolbar-menu">
+          <div class="col-sm-12 col-lg-5 col-md-4">
+              <h1 class="h" ><a href="" style="text-decoration: none;color:rgb(250, 137, 8);">Restu</a></h1>
+          </div>
+          <div class="col-sm-12 col-lg-7 col-md-8">
+              <nav class="menu-list">
+                  <li class="lista"></li>
+                  <li class="lista"></li>
+                  <li class="lista"></li>
+                  <li class="lista"></li>
+                  <li class="lista"></li>
+                  <li class="lista"></li>
+                  <li class="lista"></li>
+                  <li class="lista"></li>
+                  <li class="lista"></li>
+                  <li class="lista">
+                      <a routerLink="/login">
+                          <div>
+                              <img class="" src="assets/logos/cevichelogo.png" style="width: 25px; height: 25px;margin-right: 10px;">
+                              Iniciar Sesión
+                          </div>
+                      </a>
+                  </li>
+              </nav>
+          </div>
+      </div>
+  </mat-toolbar>
+</div>-->
+
+
+<!--<footer class="mifooter">
+<div class="col-12 col-lg-10 offset-lg-1 section-1 np">
+  <div class="row">
+    <div class="col-12 col-md-3 text-center">
+      <div>
+        <a href=""><img class="logo-pollo" src="assets/imagenlogo.png" style="width: 150px; height: 120px;"></a>
+      </div>
+      <div class="centro">Disfruta de nuestros deliciosos platillos en la comodidad de tu hogar.</div>
+    </div>
+    <div class="col-12 col-md-3 sec-2">
+      <div class="menu"><strong>Menú</strong></div>
+      <div class="submenu"><a href="" class="submenu">Sobre Nosotros</a></div>
+      <div class="submenu"><a href="" class="submenu">Términos y condiciones</a></div>
+      <div class="submenu"><a href="" class="submenu">Políticas de privacidad</a></div>
+    </div>
+    <div class="col-12 col-md-3">
+      <div class="menu"><strong>Datos informativos</strong></div>
+      <div class="submenu">Av. Elmer Faucett San Miguel, Perú</div>
+      <div class="submenu"><strong>Llámanos: +555 5555</strong></div>
+      <div class="submenu">Lun-Sab 8:00 am - 21:00 pm</div>
+    </div>
+    <div class="col-12 col-md-3 sec-4">
+      <div class="menu"><strong>Siguenos en Facebook</strong></div>
+      <div class="row submenu">
+        <div class="submenu-2 vector">
+          <a href="" target="_blank"><img src="assets/images/backgrounds/facebook.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>-->
