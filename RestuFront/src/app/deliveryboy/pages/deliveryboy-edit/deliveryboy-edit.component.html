@@ -2,7 +2,7 @@
   <div class="container pt-5 principal-cont">
       <div class="">
           <!--titulo-->
-          <h1>Registro de deliveryboy</h1>
+          <h1 style="font-family: Copperplate,fantasy">Registro de repartidor</h1>
       </div>
   <!-- Form para guardar los datos del deliveryboy y se captura con [(ngModel)] -->
   <form>
@@ -104,8 +104,8 @@
       <!-- Div de botones para regresar o guardar los datos de los campos -->
       <div class="form-row pt-2">
           <div class="col-sm-12 text-right">
-              <button mat-raised-button color="accent" style="margin-bottom: 15px;margin-right: 8px;" (click)="regresar()">Regresar</button>
-              <button mat-raised-button color="primary" style="margin-bottom: 15px;" (click)="guardarDeliveryboy()">Guardar</button>
+              <button mat-raised-button class="btn-danger" style="margin-bottom: 15px;margin-right: 8px;" (click)="regresar()">Regresar</button>
+              <button mat-raised-button class="btn-info" style="margin-bottom: 15px;" (click)="guardarDeliveryboy()">Guardar</button>
           </div>
       </div>
   </form>

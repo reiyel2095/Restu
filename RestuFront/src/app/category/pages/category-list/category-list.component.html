@@ -1,6 +1,6 @@
 <div class="container pt-5 animated fadeIn category-bg">
   <div class="pt-5">
-      <h1 style="color: white;">Listado de Categorias</h1>
+      <h1 style="color: white;">Listado de Categorías</h1>
   </div>
    <!-- Tabla que muestra el listado de todos los Category que están registrado en el sistema -->
   <div class="tabla">
@@ -14,7 +14,7 @@
         </ng-container>
         -->
         <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header style="padding-left: 5px;">Nombre</th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header style="padding-right: 5px;">Nombre</th>
           <td mat-cell *matCellDef="let element" style="padding-left: 5px;text-align: justify;">{{ element.name }} </td>
         </ng-container>
 
@@ -33,8 +33,8 @@
   <div class="row pt-2">
       <div class="col-12 text-right">
           <button mat-raised-button (click)="editarCategory()"  color="accent" style="margin-left: 5px;" [disabled]="categorySeleccionado == null">Editar</button>
-          <button mat-raised-button (click)="eliminarCategory()" [disabled]="categorySeleccionado == null" color="warn"  style="margin-left: 5px;" disabled>Eliminar</button>
-          <button mat-raised-button  (click)="agregarCategory()" color="primary"  style="margin-left: 5px;background-color: #7a3e48;">Agregar</button>
+          <button mat-raised-button (click)="eliminarCategory()" [disabled]="categorySeleccionado == null" class="btn-danger"  style="margin-left: 5px;" disabled>Eliminar</button>
+          <button mat-raised-button  (click)="agregarCategory()" class="btn-info"  style="margin-left: 5px;">Agregar</button>
       </div>
   </div>
 </div>
