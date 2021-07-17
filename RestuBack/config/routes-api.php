@@ -5,18 +5,21 @@ include __DIR__.'/../api/data/DeliveryboyData.class.php';
 include __DIR__.'/../api/data/ClientData.class.php';
 include __DIR__.'/../api/data/UserData.class.php';
 include __DIR__.'/../api/data/CategoryData.class.php';
+include __DIR__.'/../api/data/DiscountData.class.php';
 
 include __DIR__.'/../api/controller/ChefController.class.php';
 include __DIR__.'/../api/controller/DeliveryboyController.class.php';
 include __DIR__.'/../api/controller/ClientController.class.php';
 include __DIR__.'/../api/controller/UserController.class.php';
 include __DIR__.'/../api/controller/CategoryController.class.php';
+include __DIR__.'/../api/controller/DiscountController.class.php';
 
 include __DIR__.'/../api/handler/ChefHandler.class.php';
 include __DIR__.'/../api/handler/DeliveryboyHandler.class.php';
 include __DIR__.'/../api/handler/ClientHandler.class.php';
 include __DIR__.'/../api/handler/UserHandler.class.php';
 include __DIR__.'/../api/handler/CategoryHandler.class.php';
+include __DIR__.'/../api/handler/DiscountHandler.class.php';
 
 use Psr\Http\Message\ResponseInterface as Response; //use Slim\Http\Response;
 use Psr\Http\Message\ServerRequestInterface as Request; //use Slim\Http\Request;
@@ -27,6 +30,7 @@ use Restu\Handler\ChefHandler;
 use Restu\Handler\DeliveryboyHandler;
 use Restu\Handler\ClientHandler;
 use Restu\Handler\CategoryHandler;
+use Restu\Handler\DiscountHandler;
 
 $app->group('/api/chef', function (RouteCollectorProxy $group) {
     $group->post('/add', ChefHandler::class . ':addChef');
@@ -58,6 +62,13 @@ $app->group('/api/category', function (RouteCollectorProxy $group) {
     $group->get('/select', CategoryHandler::class . ':getCategories');
     $group->get('/get/{idCategory}', CategoryHandler::class . ':getCategory');
     $group->post('/delete', CategoryHandler::class . ':deleteCategory');
+});
+
+$app->group('/api/discount', function (RouteCollectorProxy $group) {
+    $group->post('/add', DiscountHandler::class . ':addDiscount');
+    $group->get('/select', DiscountHandler::class . ':getDiscounts');
+    $group->get('/get/{idDiscount}', DiscountHandler::class . ':getDiscount');
+    $group->post('/delete', DiscountHandler::class . ':deleteDiscount');
 });
 
 
