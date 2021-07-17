@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DeliveryboyModule } from './deliveryboy/deliveryboy.module';
 import { ChefModule } from './chef/chef.module';
 import { CategoryModule } from './category/category.module';
+import { DiscountModule } from './discount/discount.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CategoryModule } from './category/category.module';
     NavUserModule,
     DeliveryboyModule,
     ChefModule,
-    CategoryModule
+    CategoryModule,
+    DiscountModule
   ],
   providers: [],
   bootstrap: [AppComponent]
