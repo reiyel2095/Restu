@@ -6,6 +6,7 @@ include __DIR__.'/../api/data/ClientData.class.php';
 include __DIR__.'/../api/data/UserData.class.php';
 include __DIR__.'/../api/data/CategoryData.class.php';
 include __DIR__.'/../api/data/DiscountData.class.php';
+include __DIR__.'/../api/data/ProductData.class.php';
 
 include __DIR__.'/../api/controller/ChefController.class.php';
 include __DIR__.'/../api/controller/DeliveryboyController.class.php';
@@ -13,6 +14,7 @@ include __DIR__.'/../api/controller/ClientController.class.php';
 include __DIR__.'/../api/controller/UserController.class.php';
 include __DIR__.'/../api/controller/CategoryController.class.php';
 include __DIR__.'/../api/controller/DiscountController.class.php';
+include __DIR__.'/../api/controller/ProductController.class.php';
 
 include __DIR__.'/../api/handler/ChefHandler.class.php';
 include __DIR__.'/../api/handler/DeliveryboyHandler.class.php';
@@ -20,6 +22,7 @@ include __DIR__.'/../api/handler/ClientHandler.class.php';
 include __DIR__.'/../api/handler/UserHandler.class.php';
 include __DIR__.'/../api/handler/CategoryHandler.class.php';
 include __DIR__.'/../api/handler/DiscountHandler.class.php';
+include __DIR__.'/../api/handler/ProductHandler.class.php';
 
 use Psr\Http\Message\ResponseInterface as Response; //use Slim\Http\Response;
 use Psr\Http\Message\ServerRequestInterface as Request; //use Slim\Http\Request;
@@ -31,6 +34,7 @@ use Restu\Handler\DeliveryboyHandler;
 use Restu\Handler\ClientHandler;
 use Restu\Handler\CategoryHandler;
 use Restu\Handler\DiscountHandler;
+use Restu\Handler\ProductHandler;
 
 $app->group('/api/chef', function (RouteCollectorProxy $group) {
     $group->post('/add', ChefHandler::class . ':addChef');
@@ -69,6 +73,15 @@ $app->group('/api/discount', function (RouteCollectorProxy $group) {
     $group->get('/select', DiscountHandler::class . ':getDiscounts');
     $group->get('/get/{idDiscount}', DiscountHandler::class . ':getDiscount');
     $group->post('/delete', DiscountHandler::class . ':deleteDiscount');
+});
+
+$app->group('/api/product', function (RouteCollectorProxy $group) {
+    $group->post('/add', ProductHandler::class . ':addProduct');
+    $group->post('/uploadimg', ProductHandler::class . ':uploadImage');
+    $group->get('/select', ProductHandler::class . ':selectProduct');
+    $group->get('/select-category/{idCategory}', ProductHandler::class . ':selectProductByCategory');
+    $group->get('/get/{idProduct}', ProductHandler::class . ':getProduct');
+    $group->post('/delete', ProductHandler::class . ':deleteProduct');
 });
 
 

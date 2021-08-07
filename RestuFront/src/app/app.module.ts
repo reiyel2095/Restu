@@ -10,6 +10,7 @@ import { DeliveryboyModule } from './deliveryboy/deliveryboy.module';
 import { ChefModule } from './chef/chef.module';
 import { CategoryModule } from './category/category.module';
 import { DiscountModule } from './discount/discount.module';
+import { ProductModule } from './product/product.module';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { DiscountModule } from './discount/discount.module';
     DeliveryboyModule,
     ChefModule,
     CategoryModule,
-    DiscountModule
+    DiscountModule,
+    ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent]
